@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" id="logo" href="/">YOUTUBER MATCHING</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <!-- この下の行に mr-auto クラスを付与するだけ -->
+      <ul class="navbar-nav mr-auto">　
+        <li class="nav-item">
+          <%= link_to "",root_path, class:"nav-link" %>
+        </li>
+      </ul>
+
+      <% if logged_in? %>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "新規募集",new_topic_path, class:"nav-link" %>
+          <!--<a class="nav-link" href= "#" >新規募集</a>-->
+        </li>
+        <li class="nav-item">
+          <%= link_to "募集中",topics_path, class:"nav-link" %>
+          <!--<a class="nav-link" href="#">募集中</a>-->
+        </li>
+        <li class="nav-item">
+          <%= link_to "ログイン",login_path, class:"nav-link" %>
+          <!--<a class="nav-link" href="#">Login</a>-->
+        </li>
+                <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           アカウント
+         </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <a class="dropdown-item" href="#">マイアカウント</a>
+           <a class="dropdown-item" href="#">設定</a>
+           <div class="dropdown-divider"></div>
+           <%= link_to "ログアウト",logout_path, class:"dropdown-item", method: :delete %>
+           <!--<a class="dropdown-item" href="#">ログアウト</a>-->
+         </div>
+        </li>
+        </li>
+      </ul>
+      <% else %>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "ログイン",login_path, class:"nav-link" %>
+          <!--<a class="nav-link" href= "#" >新規募集</a>-->
+        </li>
+      </ul>
+      <% end %>
+
+    </div>
+  </div>
+</nav>

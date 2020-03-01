@@ -1,0 +1,52 @@
+<div class="topic-new-wrapper mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="text-center">案件募集</h1>
+        <%= form_for @topic do |f| %>
+          <div class="form-group">
+            <%= f.label "プロモーション名" %>
+            <%= f.text_field :topic_name, class: 'form-control'%>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "プロモーション内容" %>
+            <%= f.text_area :topic_content, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label "ジャンル" %>
+            <%= f.text_field :topic_genre, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "募集内容" %>
+            <%= f.text_field :topic_request, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "予算額" %>
+            <%= f.text_field :topic_cost, class: 'form-control' %>
+          </div>    
+          
+          <div class="form-group">
+            <p><%= f.label "予算交渉可否" %></p>
+            <%= f.label :topic_negotiation, "可" %>
+            <%= f.radio_button :topic_negotiation, "可", class:"mr-5" %>
+            <%= f.label :topic_negotiation, "否" %>
+            <%= f.radio_button :topic_negotiation, "否", class:"mr-5" %>
+          </div>  
+          
+          <div class="form-group">
+            <%= f.label "希望するYOUTUBERイメージ" %>
+            <%= f.text_field :topic_request_youtuber, class: 'form-control' %>
+          </div>
+
+
+          <%= f.submit '投稿', class: 'btn btn-lg btn-warning btn-block' %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

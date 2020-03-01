@@ -1,4 +1,7 @@
   <%= form_for @company do |f| %>
+  
+   <%= render "shared/error_messages",object: @company %>
+   
     <div class="form-group">
       <%= f.label :"企業名", class: 'text-white' %>
       <%= f.text_field :name, class: 'form-control' %>
@@ -26,4 +29,4 @@
     
     <%= f.submit yield(:button_text), class: 'btn-block btn-white' %>
   <% end %>
-  <%= link_to 'ログインはこちら', '#',class: 'text-white' %>
+  <%= link_to 'ログインはこちら', login_path,class: 'text-white' %>

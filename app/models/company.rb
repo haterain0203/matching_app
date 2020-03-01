@@ -8,4 +8,6 @@ class Company < ApplicationRecord
   validates :person_in_charge, presence: true
   
   has_secure_password
+  
+  has_many :topics
 end

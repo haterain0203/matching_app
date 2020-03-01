@@ -1,3 +1,5 @@
+
+
 h1 {
   font-weight: bold;
 }
@@ -26,7 +28,7 @@ h2 {
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: url('bg-top.png');
+  // background-image: url('bg-top.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -53,8 +55,8 @@ h2 {
 
 .users-new-wrapper {
   width: 100vw;
-  height: 100vh;
-  background-image: image-url('bg-top.png');
+  height: 150vh;
+  // background-image: image-url('bg-top.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -62,7 +64,7 @@ h2 {
   background-color: #464646;
 
   .users-new-container {
-    padding-top: 50px;
+    padding-top: 10px;
 
     .form-group {
       margin-bottom: 10px;
@@ -75,4 +77,61 @@ h2 {
   position: fixed;
   width: 100%;
   z-index: 10000;
+}
+
+#error_explanation {
+  color: white;
+  ul {
+    color: white;
+    margin: 0 0 30px 0;
+  }
+}
+
+#logo {
+  float:left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+.topic-index-wrapper {
+  padding-top: 20px;
+  background-color: #fafafa;
+  .topic-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .topic-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .topic-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  }
 }

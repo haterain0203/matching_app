@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_081248) do
+ActiveRecord::Schema.define(version: 2020_03_01_080457) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,19 @@ ActiveRecord::Schema.define(version: 2020_02_24_081248) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.integer "company_id"
+    t.string "topic_name"
+    t.text "topic_content"
+    t.string "topic_genre"
+    t.text "topic_request"
+    t.string "topic_cost"
+    t.string "topic_request_youtuber"
+    t.string "topic_negotiation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

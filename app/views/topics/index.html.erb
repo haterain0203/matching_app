@@ -1,0 +1,40 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @topics.each do |topic| %>
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="topic-index-single">
+            <p class="topic-author">
+              プロモーション名：
+              <%= topic.topic_name %>
+            </p>
+            <p class="topic-text">
+              プロモーション内容：
+              <%= topic.topic_content %>
+            </p>
+            <p class="topic-text">
+              ジャンル：
+              <%= topic.topic_genre %>
+            </p>
+            <p class="topic-text">
+              募集内容：
+              <%= topic.topic_request %>
+            </p>
+            <p class="topic-text">
+              予算額：
+              <%= topic.topic_cost %>
+            </p>
+            <p class="topic-text">
+              予算交渉：
+              <%= topic.topic_negotiation %>
+            </p>
+            <p class="topic-text">
+              希望するYOUTUBEイメージ：
+              <%= topic.topic_request_youtuber %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
