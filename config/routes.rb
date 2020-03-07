@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'topics/new'
   get 'sessions/new'
   root 'pages#home'
   get "/login", to: "sessions#new"
@@ -8,5 +7,6 @@ Rails.application.routes.draw do
   
   resources :companies
   resources :topics
+  resources :youtubers
   
 end

@@ -19,9 +19,9 @@ class SessionsController < ApplicationController
   end
   
   private
-  def log_in(company)
-    session[:company_id] = company.id
-  end  
+  # def log_in(company)
+  #   session[:company_id] = company.id
+  # end  
   
   def log_out
     session.delete(:company_id)

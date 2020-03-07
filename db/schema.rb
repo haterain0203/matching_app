@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_01_080457) do
+ActiveRecord::Schema.define(version: 2020_03_06_062639) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -33,6 +33,20 @@ ActiveRecord::Schema.define(version: 2020_03_01_080457) do
     t.string "topic_negotiation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "youtubers", force: :cascade do |t|
+    t.string "name"
+    t.string "channel_name"
+    t.integer "registrants"
+    t.string "email"
+    t.string "genre"
+    t.string "accept"
+    t.string "career"
+    t.string "request"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end

@@ -1,0 +1,48 @@
+  <%= form_for @youtuber do |f| %>
+  
+   <%= render "shared/youtuber_error_messages",object: @youtuber %>
+   
+    <div class="form-group">
+      <%= f.label :"YOUTUBER_NAME", class: 'text-white' %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :"CHANNEL_NAME", class: 'text-white' %>
+      <%= f.text_field :channel_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, class: 'text-white' %>
+      <%= f.text_field :email, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :"チャンネル登録者数", class: 'text-white' %>
+      <%= f.text_field :registrants, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :"動画ジャンル", class: 'text-white' %>
+      <%= f.text_field :genre, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :"対応可能な内容", class: 'text-white' %>
+      <%= f.text_field :accept, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :"過去の企業案件実績", class: 'text-white' %>
+      <%= f.text_field :career, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :"希望する案件", class: 'text-white' %>
+      <%= f.text_field :request, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, class: 'text-white' %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: 'text-white' %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+    </div>          
+    
+    <%= f.submit yield(:button_text), class: 'btn-block btn-white' %>
+  <% end %>
+  <%= link_to 'ログインはこちら', login_path,class: 'text-white' %>
